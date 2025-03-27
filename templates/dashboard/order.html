@@ -1,0 +1,32 @@
+{% extends 'partials/base.html' %}
+{% block title %}Pagina Reserva{% endblock %}
+
+{% block content %}
+{% include 'partials/topside.html' %}
+<div class="row my-4">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <table class="table bg-white">
+            <thead class="bg-info text-white">
+                <tr>
+                    <th scope="col">Habitacion</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Ordenado por</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in order %}
+                <tr>
+                    <td>{{ order.name }}</td>
+                    <td>{{ order.name.category }}</td>
+                    <td>{{ order.order_quantity }}</td>
+                    <td>{{ order.customer.username }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
