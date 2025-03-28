@@ -23,16 +23,14 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dashboard.urls')),
+    path('', include('user.urls')),
     path('register/', user_views.register, name='user-register'),
-    path('', auth_views.LoginView.as_view(
-        template_name='user/login.html'), name='user-login'),
+    path('login/', auth_views.LoginView.as_view(template_name='user/login.html'), name='user-login'),
+    path('contact-us/', user_views.contact_us, name='user-contact-us'),  # Línea corregida
     path('profile/', user_views.profile, name='user-profile'),
-    path('profile/update/', user_views.profile_update,
-         name='user-profile-update'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='user/logout.html'),
-         name='user-logout'),
+    path('profile/update/', user_views.profile_update, name='user-profile-update'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='user/logout.html'), name='user-logout'),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
