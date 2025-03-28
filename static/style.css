@@ -1,7 +1,109 @@
-body{
-    background: rgb(230, 227, 227);
+/* Estilos generales */
+body {
+    background-color: #f5e0e5 !important;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.my-card:hover{
-    transform: scale(1.1);
-    transition: 0.2s ease-in-out;
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #f23292 !important;
+}
+
+.navbar .nav-link, .navbar .navbar-brand {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: #d30069 !important;
+}
+
+/* Contenedor del formulario */
+.contact-form-wrapper {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* Inputs y textarea */
+.contact-form .form-input,
+.contact-form .form-text-area {
+    background-color: #f0f4f5;
+    height: 50px;
+    padding-left: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Ajustar altura del textarea */
+.contact-form .form-text-area {
+    height: auto;
+}
+
+/* Placeholder */
+.contact-form .form-control::placeholder {
+    color: #aeb4b9;
+    font-weight: 500;
+    opacity: 1;
+}
+
+/* Enfocar los inputs */
+.contact-form .form-control:focus {
+    border-color: #f33fb0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #f33fb0;
+}
+
+/* Títulos */
+.contact-form .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contact-form .description {
+    color: #aeb4b9;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Botón de enviar */
+.contact-form .submit-button-wrapper {
+    text-align: center;
+}
+
+.contact-form .submit-button-wrapper input {
+    border: none;
+    border-radius: 4px;
+    background-color: #f23292;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 60px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form .submit-button-wrapper input:hover {
+    background-color: #d30069;
+}
+
+/* Animación de tarjetas */
+.my-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.my-card:hover {
+    transform: scale(1.05);
 }
