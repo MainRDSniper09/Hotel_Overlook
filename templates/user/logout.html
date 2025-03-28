@@ -3,18 +3,15 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="row my-4">
-    <div class="col-md-6 offset-md-3">
-        <div class="border p-3 bg-white">
-            <h4>Salir</h4>
-            <hr>
-            <div class="alert alert-info">
-                <h5>Acabaste de cerrar sesion</h5>
-            </div>
-            <a href="{% url 'user-login' %}">Entrar</a>
+<div class="logout-wrapper">
+    <div class="logout-card">
+        <h4>Sesión Cerrada</h4>
+        <hr>
+        <div class="alert alert-info">
+            <h5>Has cerrado sesión exitosamente.</h5>
+            <p>¡Esperamos verte pronto! 🌟</p>
         </div>
+        <a class="btn btn-primary" href="{% url 'user-login' %}">Volver a Iniciar Sesión</a>
     </div>
 </div>
-
-
 {% endblock %}

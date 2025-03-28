@@ -1,12 +1,12 @@
-/* Estilos generales */
+/* 🎨 Estilos generales - Colores de Playa */
 body {
-    background-color: #f5e0e5 !important;
+    background-color: #e0f7fa !important; /* Azul celeste claro */
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Estilos de la barra de navegación */
+/* 🌊 Barra de navegación */
 .navbar {
-    background-color: #f23292 !important;
+    background-color: #0288d1 !important; /* Azul océano */
 }
 
 .navbar .nav-link, .navbar .navbar-brand {
@@ -14,36 +14,37 @@ body {
 }
 
 .navbar .nav-link:hover {
-    color: #d30069 !important;
+    color: #01579b !important; /* Azul más oscuro */
 }
 
-/* Contenedor del formulario */
+/* 🏝️ Contenedor del formulario */
 .contact-form-wrapper {
     padding: 100px 0;
     display: flex;
     justify-content: center;
 }
 
-/* Formulario de contacto */
+/* 📩 Formulario de contacto */
 .contact-form {
     padding: 30px 40px;
     background-color: #ffffff;
     border-radius: 12px;
     max-width: 400px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 12px rgba(0, 150, 136, 0.2); /* Sombras verde mar */
 }
 
+/* Ajustes de altura */
 .contact-form textarea {
     resize: none;
 }
 
-/* Inputs y textarea */
+/* 🏖️ Inputs y textarea */
 .contact-form .form-input,
 .contact-form .form-text-area {
-    background-color: #f0f4f5;
+    background-color: #fffde7; /* Amarillo suave, como arena */
     height: 50px;
     padding-left: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #80cbc4; /* Verde agua */
     border-radius: 5px;
 }
 
@@ -54,31 +55,32 @@ body {
 
 /* Placeholder */
 .contact-form .form-control::placeholder {
-    color: #aeb4b9;
+    color: #4db6ac; /* Verde mar */
     font-weight: 500;
     opacity: 1;
 }
 
 /* Enfocar los inputs */
 .contact-form .form-control:focus {
-    border-color: #f33fb0;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #f33fb0;
+    border-color: #ffb74d; /* Naranja sol */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.07), 0 0 8px #ffb74d;
 }
 
-/* Títulos */
+/* 🌞 Títulos */
 .contact-form .title {
     text-align: center;
     font-size: 24px;
     font-weight: 500;
+    color: #00796b; /* Verde turquesa oscuro */
 }
 
 .contact-form .description {
-    color: #aeb4b9;
+    color: #4db6ac;
     font-size: 14px;
     text-align: center;
 }
 
-/* Botón de enviar */
+/* 🌊 Botón de enviar */
 .contact-form .submit-button-wrapper {
     text-align: center;
 }
@@ -86,7 +88,7 @@ body {
 .contact-form .submit-button-wrapper input {
     border: none;
     border-radius: 4px;
-    background-color: #f23292;
+    background-color: #ff9800; /* Naranja sol */
     color: white;
     text-transform: uppercase;
     padding: 10px 60px;
@@ -96,14 +98,211 @@ body {
 }
 
 .contact-form .submit-button-wrapper input:hover {
-    background-color: #d30069;
+    background-color: #e65100; /* Naranja más oscuro */
 }
 
-/* Animación de tarjetas */
+/* 🌴 Animación de tarjetas */
 .my-card {
     transition: transform 0.3s ease-in-out;
 }
 
 .my-card:hover {
     transform: scale(1.05);
+}
+
+/* 🌊 Fondo del Login (ocupa toda la pantalla excepto el navbar) */
+.login-wrapper {
+    position: fixed; /* Fija el fondo en la pantalla */
+    top: 56px; /* Ajusta según la altura del navbar */
+    left: 0;
+    width: 100vw; /* Ocupa todo el ancho */
+    height: calc(100vh - 56px); /* Resta la altura del navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #0288d1, #26c6da, #e0f7fa); /* Degradado de playa */
+}
+
+/* 🏝️ Tarjeta de Login */
+.login-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 🌞 Títulos */
+.login-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.login-subtitle {
+    color: #4db6ac;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* ✨ Botón de Login */
+.login-button-wrapper {
+    margin-top: 20px;
+}
+
+.btn-login {
+    background-color: #ff9800; /* Naranja Sol */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #e65100;
+    transform: scale(1.05);
+}
+
+/* 📩 Inputs */
+.form-group input {
+    border: 2px solid #4db6ac;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* 🎭 Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌊 Fondo del Logout */
+.logout-wrapper {
+    position: fixed;
+    top: 56px; /* Ajusta según la altura del navbar */
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ff6f61, #ffcc67, #fff3e0); /* Colores cálidos */
+}
+
+/* 🎨 Tarjeta de Logout */
+.logout-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 🌊 Fondo de Registro */
+.register-wrapper {
+    position: fixed;
+    top: 56px; /* Ajuste según el navbar */
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Azul degradado */
+}
+
+/* 🎨 Tarjeta de Registro */
+.register-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ✨ Subtítulo */
+.register-subtitle {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* 🔘 Botón más atractivo */
+.register-card .btn-primary {
+    background-color: #0072ff;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.register-card .btn-primary:hover {
+    background-color: #0057cc;
+}
+
+/* 🌴 Fondo Contacto */
+.contact-wrapper {
+    position: fixed;
+    top: 56px; /* Ajuste según el navbar */
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Degradado rosado estilo playa */
+}
+
+/* 📬 Tarjeta de Contacto */
+.contact-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ✨ Subtítulo */
+.contact-subtitle {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* 🔘 Botón más atractivo */
+.contact-card .submit-button-wrapper input {
+    background-color: #ff4b5c;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-card .submit-button-wrapper input:hover {
+    background-color: #d93044;
 }

@@ -1,21 +1,22 @@
 {% extends 'partials/base.html' %}
-{% block title %}Entrar{% endblock %}
+{% block title %}Iniciar Sesión{% endblock %}
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="row my-4">
-    <div class="col-md-6 offset-md-3">
-        <div class="border p-3 bg-white">
-            <h4>Entrar</h4>
-            <hr>
-            <form method="POST">
-                {% csrf_token %}
+<div class="login-wrapper">
+    <div class="login-card">
+        <h2 class="login-title">Bienvenido de nuevo</h2>
+        <p class="login-subtitle">Por favor, inicia sesión para continuar</p>
+        <hr>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
                 {{ form|crispy }}
-                <input class="btn btn-success" type="submit" value="Login">
-            </form>
-        </div>
+            </div>
+            <div class="login-button-wrapper">
+                <input class="btn-login" type="submit" value="Iniciar Sesión">
+            </div>
+        </form>
     </div>
 </div>
-
-
 {% endblock %}

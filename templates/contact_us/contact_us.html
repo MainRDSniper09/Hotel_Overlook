@@ -4,46 +4,40 @@
 {% block title %}Contáctenos{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="contact-form-wrapper">
-                <!-- Aseguramos que el formulario envíe datos correctamente -->
-                <form action="{% url 'contact_us' %}" method="POST" class="contact-form">
-                    {% csrf_token %}
-                    <h5 class="title">Contáctenos</h5>
-                    <p class="description">
-                        Hotel Overlook, si tiene alguna duda, contacte con nosotros por medio de correo.
-                    </p>
-                    <div>
-                        <input type="text" class="form-control rounded border-white mb-3 form-input" 
-                               name="name" id="name" placeholder="Nombre" required>
-                    </div>
-                    <div>
-                        <input type="email" class="form-control rounded border-white mb-3 form-input" 
-                               name="email" id="email" placeholder="Correo electrónico" required>
-                    </div>
-                    <div>
-                        <textarea name="message" id="message" class="form-control rounded border-white mb-3 form-text-area" 
-                                  rows="5" cols="30" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <div class="submit-button-wrapper">
-                        <input type="submit" value="Enviar">
-                    </div>
-                </form>
-
-                <!-- Mensajes de éxito o error -->
-                {% if messages %}
-                    <div class="mt-3">
-                        {% for message in messages %}
-                            <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}" role="alert">
-                                {{ message }}
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endif %}
+<div class="contact-wrapper">
+    <div class="contact-card">
+        <h2>📩 Contáctenos</h2>
+        <p class="contact-subtitle">¿Tienes alguna duda? ¡Escríbenos y te responderemos pronto!</p>
+        <hr>
+        <form action="{% url 'contact_us' %}" method="POST" class="contact-form">
+            {% csrf_token %}
+            <div>
+                <input type="text" class="form-control rounded border-white mb-3 form-input" 
+                       name="name" id="name" placeholder="Nombre" required>
             </div>
-        </div>
+            <div>
+                <input type="email" class="form-control rounded border-white mb-3 form-input" 
+                       name="email" id="email" placeholder="Correo electrónico" required>
+            </div>
+            <div>
+                <textarea name="message" id="message" class="form-control rounded border-white mb-3 form-text-area" 
+                          rows="5" cols="30" placeholder="Mensaje" required></textarea>
+            </div>
+            <div class="submit-button-wrapper">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+
+        <!-- Mensajes de éxito o error -->
+        {% if messages %}
+            <div class="mt-3">
+                {% for message in messages %}
+                    <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
